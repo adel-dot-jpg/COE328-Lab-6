@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\adelf\OneDrive\Documents\COE328\lab 6\simulation\qsim
+vlab6
+Z1 ITUg8C@d0EBO;JW@kNDnV90
+Z2 V2oGS[7@g[60>jg:0>R^e^2
+Z3 dC:\Users\adelf\OneDrive\Documents\COE328\lab 6\simulation\qsim
+Z4 w1750263177
+Z5 8lab6.vo
+Z6 Flab6.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|lab6.vo|
+Z9 o-work work -O0
+Z10 !s100 @@Z:LGJSKf=WM342R1jTY0
+Z11 !s108 1750263177.884000
+Z12 !s107 lab6.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vlab6_Part3
+Z13 !s100 XKja@545On4Pdi=6C61L<0
+Z14 IF5U2LM=6>:J3mNPIKEh;00
+Z15 V:C^]Eh;0]Pe<E4^4cf=z31
+R3
+Z16 w1750377345
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+Z17 nlab6_@part3
+!i10b 1
+!s85 0
+Z18 !s108 1750377346.207000
+R12
+!s101 -O0
+vlab6_Part3_vlg_check_tst
+!i10b 1
+!s100 L<:g:SaJk3aM8TCY2Z`fQ0
+IzfJoKV1SBV32=4:WCRal<2
+Z19 V]H42iM>25^B1FXLa?Sfk71
+R3
+R16
+Z20 8lab6.vt
+Z21 Flab6.vt
+L0 71
+R7
+r1
+!s85 0
+31
+Z22 !s108 1750377346.281000
+Z23 !s107 lab6.vt|
+Z24 !s90 -work|work|lab6.vt|
+!s101 -O0
+R9
+Z25 nlab6_@part3_vlg_check_tst
+vlab6_Part3_vlg_sample_tst
+!i10b 1
+Z26 !s100 2:HN1gcHXzV7li8z_=LWC1
+Z27 ILAH0nf]bdUJXf0FMcnghS3
+Z28 V5Kk:^L;gY=0WR6mBX6PaJ0
+R3
+R16
+R20
+R21
+L0 29
+R7
+r1
+!s85 0
+31
+R22
+R23
+R24
+!s101 -O0
+R9
+Z29 nlab6_@part3_vlg_sample_tst
+vlab6_Part3_vlg_vec_tst
+!i10b 1
+!s100 >0TMC7fH_3DV0@k96mE@H1
+I_RLh6><7K02XPUAFQWj4Y0
+Z30 ViPO>hVd^^V2L]3h<_1?9Z3
+R3
+R16
+R20
+R21
+L0 535
+R7
+r1
+!s85 0
+31
+R22
+R23
+R24
+!s101 -O0
+R9
+Z31 nlab6_@part3_vlg_vec_tst
+vlab6_vlg_check_tst
+Z32 I83=lOW5YhI^NmW8Ak`LXk2
+Z33 VjMkm>DK?6LiA=n90^=bUB1
+R3
+Z34 w1750263176
+R20
+R21
+L0 71
+R7
+r1
+31
+Z35 !s108 1750263177.974000
+Z36 !s107 lab6.vt|
+R24
+R9
+Z37 !s100 b8WLQDL0Y?<XH<^e^AWJ=3
+!i10b 1
+!s85 0
+!s101 -O0
+vlab6_vlg_sample_tst
+Z38 !s100 _CnhP8YlMBLeIZa6lGSzR2
+Z39 I8VW<6zL6gR]D;eQWF6EgK2
+Z40 V>7AE39`IR1=kTW@FDJeio2
+R3
+R34
+R20
+R21
+L0 29
+R7
+r1
+31
+R35
+R36
+R24
+R9
+!i10b 1
+!s85 0
+!s101 -O0
+vlab6_vlg_vec_tst
+Z41 !s100 >5YS>8TfMmVm`fen1TPFB1
+Z42 IH2j?XcmWWU677F;NI5c2d0
+Z43 VYPUO_APT?6BBm`zTBfNYK0
+R3
+R34
+R20
+R21
+Z44 L0 1463
+R7
+r1
+31
+R35
+R36
+R24
+R9
+!i10b 1
+!s85 0
+!s101 -O0

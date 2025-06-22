@@ -1,0 +1,51 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity ALU_3 is -- ALU unit includes Reg. 3
+    port (
+        clk    : in std_logic;
+        Reg1, Reg2 : in std_logic_vector(7 downto 0);  -- 8-bit inputs A & B from Reg. 1 & Reg. 2
+        opcode : in std_logic_vector(15 downto 0);      -- 8-bit opcode from Decoder
+        Result : out std_logic_vector(7 downto 0)      -- 8-bit Result
+    );
+end ALU_3;
+
+architecture calculation of ALU_3 is
+begin
+    process (clk)
+    begin
+        if rising_edge(clk) then -- (clk'EVENT AND clk = '1')
+            case opcode is
+                when "0000000000000001" =>
+                    -- Do addition for Reg1 and Reg2
+                    Result <= Reg1 + Reg2;
+                when "0000000000000010" =>
+                    -- Do subtraction for Reg1 and Reg2
+                    Result <= Reg1 - Reg2;
+                when "0000000000000100" =>
+                    -- Do inverse
+                    Result <= not Reg1;
+                when "0000000000001000" =>
+                    -- Do Boolean NAND
+                    Result <= not (Reg1 and Reg2);
+                when "0000000000010000" =>
+                    -- Do Boolean NOR
+                    Result <= not (Reg1 or Reg2);
+                when "0000000000100000" =>
+                    -- Do Boolean AND
+                    Result <= Reg1 and Reg2;
+                when "0000000001000000" =>
+                    -- Do Boolean XOR
+                    Result <= Reg1 xor Reg2;
+                when "0000000010000000" =>
+                    -- Do Boolean OR
+                    Result <= Reg1 or Reg2;
+                when others =>
+                    -- Don't care, do nothing // Result <= (others => '0');
+						  Result <= "00000000";
+            end case;
+        end if;
+    end process;
+end calculation;

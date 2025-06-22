@@ -1,0 +1,44 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_signed.all;
+
+ENTITY ssegleft IS
+PORT (
+  bcd      : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- signed input
+  leds_mag : OUT STD_LOGIC_VECTOR(1 TO 7);     -- magnitude display
+  leds_sign: OUT STD_LOGIC_VECTOR(1 TO 7)      -- sign display
+);
+END ssegleft;
+
+ARCHITECTURE Behavior OF ssegleft IS
+  SIGNAL magnitude : STD_LOGIC_VECTOR(3 DOWNTO 0);
+  SIGNAL bcdleft: STD_LOGIC_VECTOR(3 DOWNTO 0);
+BEGIN
+  PROCESS (bcd)
+  BEGIN
+	 bcdleft <= bcd(7 DOWNTO 4);
+    -- Sign logic
+    IF bcdleft(3) = '1' THEN  -- Negative number
+      leds_sign <= "0000001";  -- Dash (only g is ON)
+      magnitude <= NOT(bcdleft) + 1;  -- Two's complement to get magnitude
+    ELSE
+      leds_sign <= "0000000";  -- No segments ON
+      magnitude <= bcdleft;
+    END IF;
+
+    -- Magnitude to 7-seg
+    CASE magnitude IS
+		 WHEN "0000" => leds_mag <= "0000001"; -- 0
+		 WHEN "0001" => leds_mag <= "1001111"; -- 1
+		 WHEN "0010" => leds_mag <= "1001000"; -- 2
+		 WHEN "0011" => leds_mag <= "0000110"; -- 3
+		 WHEN "0100" => leds_mag <= "1001100"; -- 4
+		 WHEN "0101" => leds_mag <= "0100100"; -- 5
+		 WHEN "0110" => leds_mag <= "0100000"; -- 6
+		 WHEN "0111" => leds_mag <= "0001111"; -- 7
+		 WHEN "1000" => leds_mag <= "0000000"; -- 8
+		 WHEN "1001" => leds_mag <= "0000100"; -- 9
+		 WHEN OTHERS => leds_mag <= "1111111"; -- off/error?
+	END CASE;
+  END PROCESS;
+END Behavior;
